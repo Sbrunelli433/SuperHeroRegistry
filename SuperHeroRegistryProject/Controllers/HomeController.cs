@@ -26,5 +26,19 @@ namespace SuperHeroRegistryProject.Controllers
 
             return View();
         }
+
+        public ActionResult Create()
+        {
+            ViewBag.Message = "Create a Super Hero on this page!";
+
+            return View("/Views/SuperHeroes/Create.cshtml");
+        }
+
+        public ActionResult Delete()
+        {
+            ViewBag.Message = "delete a super hero on this page";
+
+            return View("/Views/SuperHeroes/Delete.cshtml");
+        }
     }
 }
