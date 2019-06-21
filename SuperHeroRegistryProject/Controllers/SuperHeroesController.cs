@@ -103,7 +103,7 @@ namespace SuperHeroRegistryProject.Controllers
             }
             catch
             {
-                return View();
+                return View("/Views/Home/Index.cshtml");
             }
         }
     }
