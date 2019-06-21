@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -73,20 +74,32 @@ namespace SuperHeroRegistryProject.Controllers
         }
 
         // GET: SuperHeroes/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Delete(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            SuperHero superHero = db.SuperHeroes.Find(id);
+            if (superHero == null)
+            {
+                return HttpNotFound();
+            }
+            return View(superHero);
         }
 
         // POST: SuperHeroes/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete(int id)
         {
             try
             {
                 // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
+                SuperHero superHero = db.SuperHeroes.Find(id);
+                db.SuperHeroes.Remove(superHero);
+                db.SaveChanges();
+                return RedirectToAction("/Views/Home/Index.cshtml");
             }
             catch
             {
