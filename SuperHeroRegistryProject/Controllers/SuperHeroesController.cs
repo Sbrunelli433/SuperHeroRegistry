@@ -24,9 +24,19 @@ namespace SuperHeroRegistryProject.Controllers
         }
 
         // GET: SuperHeroes/Details/5
-        public ActionResult Details()
+        public ActionResult Details(int? id)
         {
-            return View("Details");
+
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            SuperHero superHero = db.SuperHeroes.Find(id);
+            if (superHero == null)
+            {
+                return HttpNotFound();
+            }
+            return View(superHero);
         }
 
         // GET: SuperHeroes/Create
