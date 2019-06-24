@@ -26,7 +26,7 @@ namespace SuperHeroRegistryProject.Controllers
         // GET: SuperHeroes/Details/5
         public ActionResult Details()
         {
-            return RedirectToAction("Index");
+            return View("Details");
         }
 
         // GET: SuperHeroes/Create
