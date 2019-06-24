@@ -1,4 +1,5 @@
-﻿using SuperHeroRegistryProject.Models;
+﻿using FluentNHibernate.Conventions.Inspections;
+using SuperHeroRegistryProject.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,13 +19,14 @@ namespace SuperHeroRegistryProject.Controllers
         // GET: SuperHeroes
         public ActionResult Index()
         {
-            return View();
+           
+            return View(db.SuperHeroes.ToList());
         }
 
         // GET: SuperHeroes/Details/5
         public ActionResult Details()
         {
-            return View();
+            return RedirectToAction("Index");
         }
 
         // GET: SuperHeroes/Create
@@ -43,34 +45,46 @@ namespace SuperHeroRegistryProject.Controllers
                 // TODO: Add insert logic here
                 db.SuperHeroes.Add(superHero);
                 db.SaveChanges();
-                return View("/Views/Home/Index.cshtml");
+                return View("Index");
             }
             catch
             {
-                return View();
+                return View("Index");
             }
         }
 
         // GET: SuperHeroes/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            SuperHero superHero = db.SuperHeroes.Find(id);
+            if (superHero == null)
+            {
+                return HttpNotFound();
+            }
+            return View(superHero);
         }
 
         // POST: SuperHeroes/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind(Include = "ID,Name,AlterEgo,PrimaryAbility,SecondaryAbility,Catchphrase")] SuperHero superHero)
         {
-            try
-            {
-                // TODO: Add update logic here
 
-                return RedirectToAction("/Views/Home/Index.cshtml");
-            }
-            catch
-            {
-                return View();
-            }
+                    // TODO: Add update logic here
+                    if (ModelState.IsValid)
+                    {
+                    db.Entry(superHero).State = System.Data.Entity.EntityState.Modified;
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+
+                    }
+            return View(superHero);
+            
+
         }
 
         // GET: SuperHeroes/Delete/5
@@ -99,11 +113,11 @@ namespace SuperHeroRegistryProject.Controllers
                 SuperHero superHero = db.SuperHeroes.Find(id);
                 db.SuperHeroes.Remove(superHero);
                 db.SaveChanges();
-                return RedirectToAction("/Views/Home/Index.cshtml");
+                return RedirectToAction("Index");
             }
             catch
             {
-                return View("/Views/Home/Index.cshtml");
+                return View("Index");
             }
         }
     }

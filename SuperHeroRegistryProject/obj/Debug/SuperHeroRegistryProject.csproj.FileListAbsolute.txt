@@ -82,7 +82,6 @@ C:\Users\brune\Desktop\DCC\Week_07\SuperHero\SuperHeroRegistry\SuperHeroRegistry
 C:\Users\brune\Desktop\DCC\Week_07\SuperHero\SuperHeroRegistry\SuperHeroRegistryProject\bin\System.Web.WebPages.Deployment.xml
 C:\Users\brune\Desktop\DCC\Week_07\SuperHero\SuperHeroRegistry\SuperHeroRegistryProject\bin\System.Web.WebPages.Razor.xml
 C:\Users\brune\Desktop\DCC\Week_07\SuperHero\SuperHeroRegistry\SuperHeroRegistryProject\bin\Newtonsoft.Json.xml
-C:\Users\brune\Desktop\DCC\Week_07\SuperHero\SuperHeroRegistry\SuperHeroRegistryProject\bin\Antlr3.Runtime.pdb
 C:\Users\brune\Desktop\DCC\Week_07\SuperHero\SuperHeroRegistry\SuperHeroRegistryProject\bin\EntityFramework.xml
 C:\Users\brune\Desktop\DCC\Week_07\SuperHero\SuperHeroRegistry\SuperHeroRegistryProject\bin\EntityFramework.SqlServer.xml
 C:\Users\brune\Desktop\DCC\Week_07\SuperHero\SuperHeroRegistry\SuperHeroRegistryProject\bin\Microsoft.AspNet.Identity.Core.xml
@@ -105,3 +104,14 @@ C:\Users\brune\Desktop\DCC\Week_07\SuperHero\SuperHeroRegistry\SuperHeroRegistry
 C:\Users\brune\Desktop\DCC\Week_07\SuperHero\SuperHeroRegistry\SuperHeroRegistryProject\obj\Debug\SuperHeroRegistryProject.pdb
 C:\Users\brune\Desktop\DCC\Week_07\SuperHero\SuperHeroRegistry\SuperHeroRegistryProject\obj\Debug\SuperHeroRegistryProject.Migrations.InitialMigration.resources
 C:\Users\brune\Desktop\DCC\Week_07\SuperHero\SuperHeroRegistry\SuperHeroRegistryProject\obj\Debug\SuperHeroRegistryProject.csproj.GenerateResource.cache
+C:\Users\brune\Desktop\DCC\Week_07\SuperHero\SuperHeroRegistry\SuperHeroRegistryProject\bin\FluentNHibernate.dll
+C:\Users\brune\Desktop\DCC\Week_07\SuperHero\SuperHeroRegistry\SuperHeroRegistryProject\bin\Iesi.Collections.dll
+C:\Users\brune\Desktop\DCC\Week_07\SuperHero\SuperHeroRegistry\SuperHeroRegistryProject\bin\NHibernate.dll
+C:\Users\brune\Desktop\DCC\Week_07\SuperHero\SuperHeroRegistry\SuperHeroRegistryProject\bin\Remotion.Linq.dll
+C:\Users\brune\Desktop\DCC\Week_07\SuperHero\SuperHeroRegistry\SuperHeroRegistryProject\bin\Remotion.Linq.EagerFetching.dll
+C:\Users\brune\Desktop\DCC\Week_07\SuperHero\SuperHeroRegistry\SuperHeroRegistryProject\bin\Antlr3.Runtime.xml
+C:\Users\brune\Desktop\DCC\Week_07\SuperHero\SuperHeroRegistry\SuperHeroRegistryProject\bin\FluentNHibernate.xml
+C:\Users\brune\Desktop\DCC\Week_07\SuperHero\SuperHeroRegistry\SuperHeroRegistryProject\bin\Iesi.Collections.xml
+C:\Users\brune\Desktop\DCC\Week_07\SuperHero\SuperHeroRegistry\SuperHeroRegistryProject\bin\NHibernate.xml
+C:\Users\brune\Desktop\DCC\Week_07\SuperHero\SuperHeroRegistry\SuperHeroRegistryProject\bin\Remotion.Linq.xml
+C:\Users\brune\Desktop\DCC\Week_07\SuperHero\SuperHeroRegistry\SuperHeroRegistryProject\bin\Remotion.Linq.EagerFetching.xml

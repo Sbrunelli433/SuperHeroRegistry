@@ -10,7 +10,7 @@ namespace SuperHeroRegistryProject.Controllers
     {
         public ActionResult Index()
         {
-            return View("/Views/SuperHeroes/Index.cshtml");
+            return View();
         }
 
         public ActionResult About()
