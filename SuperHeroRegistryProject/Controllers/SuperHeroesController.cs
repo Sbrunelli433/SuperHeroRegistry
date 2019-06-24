@@ -45,7 +45,7 @@ namespace SuperHeroRegistryProject.Controllers
                 // TODO: Add insert logic here
                 db.SuperHeroes.Add(superHero);
                 db.SaveChanges();
-                return View("Index");
+                return RedirectToAction("Index");
             }
             catch
             {
@@ -71,7 +71,7 @@ namespace SuperHeroRegistryProject.Controllers
         // POST: SuperHeroes/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Name,AlterEgo,PrimaryAbility,SecondaryAbility,Catchphrase")] SuperHero superHero)
+        public ActionResult Edit([Bind(Include = "ID,Name,AlterEgoName,PrimaryAblity,SecondaryAbility,Catchphrase")] SuperHero superHero)
         {
 
                     // TODO: Add update logic here
