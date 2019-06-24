@@ -1,0 +1,58 @@
+﻿@model SuperHeroRegistryProject.Models.SuperHero
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SuperHero</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AlterEgoName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AlterEgoName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimaryAblity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrimaryAblity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondaryAbility)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecondaryAbility)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Catchphrase)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Catchphrase)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = SuperHero.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

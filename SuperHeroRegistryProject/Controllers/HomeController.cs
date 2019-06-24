@@ -10,7 +10,7 @@ namespace SuperHeroRegistryProject.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return View("/Views/SuperHeroes/Index.cshtml");
         }
 
         public ActionResult About()
@@ -40,5 +40,13 @@ namespace SuperHeroRegistryProject.Controllers
 
             return View("/Views/SuperHeroes/Delete.cshtml");
         }
+
+        public ActionResult Edit()
+        {
+            ViewBag.Message = "here's the list";
+
+            return View("/Views/SuperHeroes/Edit.cshtml");
+        }
+
     }
 }

@@ -22,7 +22,7 @@ namespace SuperHeroRegistryProject.Controllers
         }
 
         // GET: SuperHeroes/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details()
         {
             return View();
         }
@@ -65,7 +65,7 @@ namespace SuperHeroRegistryProject.Controllers
             {
                 // TODO: Add update logic here
 
-                return RedirectToAction("Index");
+                return RedirectToAction("/Views/Home/Index.cshtml");
             }
             catch
             {
