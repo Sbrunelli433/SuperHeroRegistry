@@ -18,15 +18,13 @@ namespace SuperHeroRegistryProject.Controllers
         }
         // GET: SuperHeroes
         public ActionResult Index()
-        {
-           
+        {  
             return View(db.SuperHeroes.ToList());
         }
 
         // GET: SuperHeroes/Details/5
         public ActionResult Details(int? id)
         {
-
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -59,7 +57,7 @@ namespace SuperHeroRegistryProject.Controllers
             }
             catch
             {
-                return View("Index");
+                return View(superHero);
             }
         }
 
@@ -117,17 +115,18 @@ namespace SuperHeroRegistryProject.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id)
         {
+            SuperHero superHero = db.SuperHeroes.Find(id);
             try
             {
                 // TODO: Add delete logic here
-                SuperHero superHero = db.SuperHeroes.Find(id);
+                
                 db.SuperHeroes.Remove(superHero);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
             catch
             {
-                return View("Index");
+                return View(superHero);
             }
         }
     }
