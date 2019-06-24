@@ -17,5 +17,9 @@ namespace SuperHeroRegistryProject.Models
         public string SecondaryAbility { get; set; }
         public string Catchphrase{ get; set; }
 
+        //public string ImageFile { get; set; }
+        //public string Caption { get; set; }
+        //byte[] Image { get; set; }
+
     }
 }
